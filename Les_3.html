@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+             document.write("<br>" + "<H2>Первое задание</H2>" + "<br>")
+            var i=0;
+            while (i <= 100) {
+              if((i%2!=0 && i%3!=0 && i%5!=0 && i%7!=0) || i==2 || i==3 || i==5 || i==7)
+              {
+             //   console.log (i);
+                document.write(i + "<br>");
+              }
+            i++;
+            }
+           
+        </script>
+        <script>
+           document.write("<br>" + "<H2>Второе задание</H2>" + "<br>"+ "<br>")
+            var count, number, value;
+            count = 10;
+            number = 0;
+            do {
+                if (number == 0) {
+                value = "это ноль";
+                }
+                else {
+                    if (number%2==0) {
+                        value = "четное число";
+                        }
+                    else {
+                        value = "НЕчетное число";
+                        }
+                }
+                document.write(number + " - " + value + "<br>");
+                number++;
+            } while (number <= 10);
+            document.write("<br>" + "<H2>Третье задание</H2>" + "<br>"+ "<br>")
+            for (var x=0; x<=9; x++)
+            document.write(x + "<br>")
+           
+            
+        </script>
+        <script>
+            document.write("<br>" + "<H2>Четвертое задание</H2>" + "<br>"+ "<br>")
+
+            var str = '';
+           for (var y = 1; y <= 20; y++) {
+                str += 'x';
+                document.write(str + '<br>');
+            }
+        </script>
+
+    </body>
+</html>
