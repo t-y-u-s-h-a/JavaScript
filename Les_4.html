@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            document.write("<br>" + "<H2>Первое задание</H2>" + "<br>");
+            var getNum = prompt ("Введите число от 0 до 999");
+            var object = {};
+            object = number(object, getNum);
+            console.log(object);
+            if( getNum.length<0 ||  getNum.length>3 ) {
+                    alert("Ошибка: допустимый диапазон 0-999");
+                }
+           function number(objNum, strNum) {
+                if (strNum.length == 3)
+                    {
+                        objNum = {
+                        hundreds: strNum[0],
+                        decades: strNum[1],
+                        units: strNum[2]
+                        };
+                    }
+                    else if (strNum.length == 2) {
+                        objNum = {
+                        hundreds: 0,
+                        decades: strNum[0],
+                        units: strNum[1]
+                        };
+                    }
+                    else if (strNum.length == 1) {
+                        objNum = {
+                        hundreds: 0,
+                        decades: 0,
+                        units: strNum[0]
+                        };
+                    }
+                return objNum;
+           }  
+        </script>
+    </body>
+</html>
