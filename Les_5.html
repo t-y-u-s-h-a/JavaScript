@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+<header>
+    <style>
+       .container {
+           width: 580px;
+           height: 580px;
+       margin: 0 auto;
+           background-color:#ac9797;
+           align-items: center;
+            position: center;
+        }
+
+        #table {
+            border: 1px solid #000;
+            margin: 0 auto;
+            align-items: center;
+            position: center;
+
+        }
+        #parent {
+          padding-top: 49px;
+            align-items: center;
+            position: center;
+
+        }
+        .words1 {
+            color: white;
+            font-size: 30px;
+            font-weight:bold;
+           
+        }
+        #cols1 {
+            transform: rotate(90deg);
+            position: absolute;
+            margin-left: -200px;
+            margin-top: 280px;
+            letter-spacing:19px;
+            text-shadow: -1px 3px 0 gray;
+        }
+        #cols3 {
+           
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 535px;
+            letter-spacing:19px;
+            text-shadow: -2px 1px 0 gray;
+        }
+
+        .figa {
+            font-size: 40px;
+            position: center;
+            text-shadow: -2px 1px 0 rgb(94, 92, 92);
+        }
+      
+    </style>
+</header>
+<body>
+    <div class="container">
+        <div class="words1" id="cols1">8 7 6 5 4 3 2 1 </div>
+        <div class="words1" id="cols3">a b c d e f g h </div>
+        <div id="parent">
+        </div>
+    </div>
+
+    <script>
+        var parent = document.getElementById("parent");
+        var table = document.createElement('table');
+        table.id = "table";
+        parent.appendChild(table);
+        table.cellSpacing = 0;
+        table.cellPadding = 0;
+
+        for (var i = 1; i <= 8; i++) {
+            var tr = document.createElement('tr');
+
+            for (var j = 1; j <= 8; j++) {
+                var td = document.createElement('td');
+                td.id = "" + i + j;
+                td.width = "60px";
+                td.height = "60px";
+                td.classList.add("figa");
+                if (i % 2 != 0) {
+                    if (j % 2 != 0) {
+                        td.bgColor = "#E1E3E3";
+                    }
+                    else {
+                        td.bgColor = "#CC5555";
+                    }
+                }
+                else {
+                    if (j % 2 == 0) {
+                        td.bgColor = "#E1E3E3";
+                    }
+                    else {
+                        td.bgColor = "#CC5555";
+                    }
+                }
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+
+        }
+        setPosition ("&#9814;", "11");
+        setPosition ("&#9816;", "12");
+        setPosition ("&#9815;", "13");
+        setPosition ("&#9813;", "14");
+        setPosition ("&#9812;", "15");
+        setPosition ("&#9815;", "16");
+        setPosition ("&#9816;", "17");
+        setPosition ("&#9814;", "18");
+
+        setPosition ("&#9817;", "21");
+        setPosition ("&#9817;", "22");
+        setPosition ("&#9817;", "23");
+        setPosition ("&#9817;", "24");
+        setPosition ("&#9817;", "25");
+        setPosition ("&#9817;", "26");
+        setPosition ("&#9817;", "27");
+        setPosition ("&#9817;", "28");
+
+
+
+        setPosition ("&#9820;", "81");
+        setPosition ("&#9822;", "82");
+        setPosition ("&#9821;", "83");
+        setPosition ("&#9819;", "84");
+        setPosition ("&#9818;", "85");
+        setPosition ("&#9821;", "86");
+        setPosition ("&#9822;", "87");
+        setPosition ("&#9820;", "88");
+        setPosition ("&#9823;", "71");
+        setPosition ("&#9823;", "72");
+        setPosition ("&#9823;", "73");
+        setPosition ("&#9823;", "74");
+        setPosition ("&#9823;", "75");
+        setPosition ("&#9823;", "76");
+        setPosition ("&#9823;", "77");
+        setPosition ("&#9823;", "78");
+
+// function
+        function setPosition  (code, positionID) {
+            var cellId = document.getElementById (positionID);
+            cellId.innerHTML = code;
+            
+        }
+
+    </script>
+
+
+</body>
+
+</html>
