@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title> Галлерея</title>
+
+</head>
+<header>
+    <style>
+   
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+          
+            
+        }
+        #bigPic_1 {
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            z-index: 100;
+        }
+        #bigPic_2 {
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            z-index: 90;
+        }
+        #pic_false {
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            z-index: 80;
+        }
+     
+    </style>
+</header>
+<body>
+    
+    <div id="container">
+        <H1>ПРИМЕРЫ ИНТЕРЬЕРОВ</H1>
+        <img id="bigPic_1" style= "display: none" src="pic/1.jpg" title="свернуть" alt="1066x600">
+        <img id="bigPic_2" style= "display: none" src="pic/2.jpg" title="свернуть" alt="1066x600">
+        <img id="pic_false" style= "display: none" src="pic/false.jpg" title="свернуть" alt="1066x600">
+        <a id="switch" href="#"><img id="miniPic_1" style="border-radius: 100%" src="pic/1_1.jpg" title="свернуть" alt="600x600"></a>
+        <a id="switch2" href="#"><img id="miniPic_2"style="border-radius: 100%" src="pic/2_2.jpg" title="свернуть" alt="600x600"></a>
+        <a id="switch3" href="#"><img id="miniPic_3" style="border-radius: 100%" src="pic/3_3.jpg" title="свернуть" alt="600x600"></a>
+    </div>
+    <script>
+        var bigPic_1 = document.getElementById("bigPic_1");
+        window.onload = function() {
+        var a = document.getElementById('switch');
+        a.onclick = function() {
+        if (document.getElementById ( 'bigPic_1').style.display == 'none') {
+               // alert(2);
+               bigPic_1.style.display = 'block';
+                document.getElementById ('switch').click;
+                }
+                else {
+                bigPic_1.style.display = 'none';
+                
+                }
+                }
+
+
+        
+        var bigPic_2 = document.getElementById("bigPic_2");
+        
+        var b = document.getElementById('switch2');
+        b.onclick = function() {
+        if (document.getElementById ( 'bigPic_2').style.display == 'none') {
+                bigPic_2.style.display = 'block';
+                document.getElementById ('switch2').click;
+                
+                }
+                else {
+                bigPic_2.style.display = 'none';
+                }
+                }
+        
+        var pic_false = document.getElementById("pic_false");
+        
+        var c = document.getElementById('switch3');
+        c.onclick = function () {
+            if (document.getElementById ( 'pic_false').style.display == 'none') {
+            pic_false.style.display = 'block';
+            document.getElementById ('switch3').click;
+            
+            }
+            else {
+            pic_false.style.display = 'none';
+            
+            }
+        }
+        }
+            
+        </script>
+
+</body>
+
+</html>
